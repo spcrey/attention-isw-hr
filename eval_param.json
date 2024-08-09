@@ -1,0 +1,10 @@
+{
+    "log_folder": "log/tem",
+    "dataset_folder": "data",
+    "dataset_name": "isw_dataset_c307.npz",
+    "data_shape": [64, 128, 256],
+    "eval_folder": "eval",
+    "use_cuda": true,
+    "cuda_devices": [0],
+    "eval_point_batch_size": 200
+}

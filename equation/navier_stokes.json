@@ -1,0 +1,14 @@
+{
+    "temperature diffusion equation": 
+        "(dif(b, t) * nt + u * dif(b, x) * nx - w * dif(b, z) * nz) * 1",
+    "salinity diffusion equation": 
+        "(dif(s, t) * nt + u * dif(s, x) * nx - w * dif(s, z) * nz) * 1",
+    "continuity equation": 
+        "(dif(u, x) * nx - dif(w, z) * nz) * 200",
+    "seawater state equation": 
+        "(rho - 1028 * (1 - 1.7 * 10 ** (-4) * (b + 273.15 - 283) + 7.6 * 10 ** (-4) * (s - 35))) / 1",
+    "momentum equation z": 
+        "(dif(w, t) * nt + u * dif(w, x) * nx - w * dif(w, z) * nz - 1 / rho * dif(p, z) * nz + 9.8) / 1",
+    "momentum equation x": 
+        "(dif(u, t) * nt + u * dif(u, x) * nx - w * dif(u, z) * nz + 1 / rho * dif(p, x) * nx) * 1"
+}
