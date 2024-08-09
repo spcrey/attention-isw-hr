@@ -2,6 +2,12 @@ import numpy as np
 
 from ocean_grid_data import OceanGridData
 
+# used for dividing data into chunks, for example, dividing a 3x3 data into 4 chunks of 2x2
+# 
+#  1  2  3    ->  1  2  ,  2  3  ,  4  5  ,  5  6
+#  4  5  6        4  5     5  6     7  8     8  9
+#  7  8  9
+
 class Croper:
     def __init__(self, full_shape: list[int], crop_shape: list[int]) -> None:
         self.full_nt, self.full_nz, self.full_nx = full_shape

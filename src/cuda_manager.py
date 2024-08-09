@@ -3,6 +3,8 @@ from torch import nn
 
 from singleton import singleton
 
+# for the specification and allocation of GPU resources
+
 @singleton
 class CudaManager:
     def __init__(self, use_cuda: bool, cuda_devices: list[int], batch_size_per_cuda=None) -> None:
