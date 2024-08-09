@@ -78,6 +78,7 @@ class FullEvaler(Evaler):
         fea_psnr = self.calc_fea_psnr(truth_hres_crop, predict_hres_crop)
         fea_ssim = self.calc_fea_ssim(truth_hres_crop, predict_hres_crop)
         self.recorder.metric.add_psnr_ssim(fea_psnr, fea_ssim)
+        self.recorder.metric.save()
         pass
 
     def adapt(self, data: list[torch.Tensor]):

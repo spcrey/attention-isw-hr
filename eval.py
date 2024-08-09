@@ -29,7 +29,7 @@ def main():
     recorder = EvalRecorder(logger, metric)
     recorder.logger.info("eval start!")
     # dataset
-    nptr = NptrFactory()(True, "nptr")
+    nptr = NptrFactory()(True, "globel_nptr")
     point_generator = GridPointGenerator()
     sampler = Sampler(param.data_shape, [4, 8, 8], None, point_generator)
     croper = Croper(param.data_shape, param.sampling_crop_shape)

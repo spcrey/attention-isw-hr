@@ -20,6 +20,7 @@ class GlobelNptr(Nptr):
                 data = isw_data.phy_fea_data[dataset_index, phy_fea_index]
                 data = self._topo_middled(data)
                 isw_data.phy_fea_data[dataset_index, phy_fea_index] = data
+        return isw_data
 
 class EageNptr(Nptr):
     def __call__(self, isw_data: OceanGridData) -> OceanGridData:
